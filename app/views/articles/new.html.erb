@@ -1,0 +1,17 @@
+<h1>Add a new article</h1>
+
+
+<%= form_for @article do |f| %>
+  <li class="article_title">
+    <%= f.label :title %>
+    <%= f.text_area :title, {placeholder: "Title"}  %>
+  </li>
+
+  <li>
+    <%= f.label :description %>
+    <%= f.text_area :description, {placeholder: "Description"} %>
+  </li>
+
+  <%= f.submit "Submit Article" %>
+<% end %>
+

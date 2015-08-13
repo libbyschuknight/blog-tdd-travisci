@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+
+    <header>
+      <h1>SchuKnight's RAILS BLOG!!<h1>
+        <h5>@SchuKnight on Twitter</h5>
+    </header>
+
+    <nav>
+       <ul>
+          <li>
+            <button type="button">   <%= link_to 'Home', articles_path %> </button>
+          </li>
+          <li>
+            <button type="button"> <a href="https://twitter.com/SchuKnight" target="_blank" >Twitter </a> </button>
+            <!-- <= button_to 'Your cart', orders_path, method: 'get' %> -->
+          </li>
+       </ul>
+     </nav>
+
+    <div id="container">
+
+      <%= yield %>
+
+    </div>
+
+  </body>
+
+</html>
